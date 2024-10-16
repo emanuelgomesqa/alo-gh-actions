@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="melhoresAtletasApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>AngularJs App</title>
+
+    <!-- Bootstrap theme -->
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic" />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="main" ng-controller="AtletaController">
+        <ul class="atletalist">
+            <li class="atleta cf" ng-repeat="item in atletas">
+                <img ng-src="images/{{ item.apelido}}.jpg" alt="Foto de {{ item.nome }}">
+                <div class="info">
+                    <h2>{{ item.nome }}</h2>
+                    <h3>{{ item.apelido }}</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+
+
+
+     <!-- Angular scripts -->
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+     <!-- Controllers -->
+     <script src="js/controller.js"></script>
+</body>
+</html>
